@@ -1,3 +1,8 @@
+.modalf_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .modalf_container {
   position: fixed;
   background: white;
@@ -6,6 +11,7 @@
   box-shadow: 5px 5px 10px grey;
   padding: 30px;
   overflow: auto;
+  box-sizing: border-box;
   min-height: 200px;
   min-width: 300px;
 }
