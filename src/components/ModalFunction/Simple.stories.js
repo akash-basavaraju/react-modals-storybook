@@ -3,6 +3,7 @@ import Simple from "./SimpleContainer";
 import { Provider as ReduxProvider } from "react-redux";
 import store from "../../store";
 import ModalFunction from "../../shared/ModalFunction";
+import OpenFromModalComp from "./OpenFromModalComp";
 
 export default {
   component: Simple,
@@ -26,5 +27,18 @@ SimpleModal.args = {
     width: "calc(100% - 2rem)",
     height: "50%",
     modalStyle: { top: "200px" },
+  },
+};
+
+export const OpenFromModal = Template.bind({});
+OpenFromModal.args = {
+  showModalProps: {
+    onClose: () => {
+      console.log("Simple Functional Modal Closed");
+    },
+    comp: <OpenFromModalComp />,
+    width: "500px",
+    height: "50%",
+    modalStyle: { top: "100px", left: "100px" },
   },
 };
