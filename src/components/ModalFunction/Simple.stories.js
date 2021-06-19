@@ -7,7 +7,7 @@ import OpenFromModalComp from "./OpenFromModalComp";
 
 export default {
   component: Simple,
-  title: "Simple",
+  title: "Functional Modal",
 };
 
 const Template = (args) => (
