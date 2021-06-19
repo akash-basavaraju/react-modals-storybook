@@ -5,13 +5,19 @@ const initialState = { modalStack: [] };
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case SHOW_MODAL: {
-      return { modalStack: [...state.modalStack, action.payload] };
+      const timeStamp = new Date().getTime();
+      return {
+        modalStack: [...state.modalStack, { ...action.payload, timeStamp }],
+      };
     }
     case HIDE_MODAL: {
       const mModalStack = [...state.modalStack];
-      debugger;
+
       if (action.payload || action.payload === 0) {
-        mModalStack.splice(action.payload, 1);
+        const index = mModalStack.findIndex(
+          ({ timeStamp }) => timeStamp === action.payload
+        );
+        index !== -1 && mModalStack.splice(index, 1);
       } else {
         mModalStack.pop();
       }

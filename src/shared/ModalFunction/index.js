@@ -4,7 +4,6 @@ import { bindActionCreators } from "redux";
 import { showModal, hideModal } from "../../store/actions";
 
 const mapStateToProps = (state) => {
-  debugger;
   return {
     ...state.modalReducer,
   };

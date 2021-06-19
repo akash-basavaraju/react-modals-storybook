@@ -7,17 +7,17 @@ export default function ModalFunction({ modalStack = [], hideModal }) {
     return null;
   }
   return modalStack.map(
-    ({ comp, onClose, modalStyle, height, width }, index) => {
+    ({ comp, onClose, modalStyle, height, width, timeStamp }) => {
       return (
         <div
-          key={index}
+          key={timeStamp}
           className="modalf_container"
           style={{ ...modalStyle, height, width }}
         >
           <CloseButton
             onClose={() => {
               onClose();
-              hideModal(index);
+              hideModal(timeStamp);
             }}
           />
           {comp}
