@@ -1,19 +1,19 @@
 import React from "react";
-import SimpleModalFunction from "./ModalFunctionContainer";
+import ModalFunctionDemo from "./ModalFunctionDemoContainer";
 import { Provider as ReduxProvider } from "react-redux";
 import store from "../../store";
 import ModalFunction from "../../shared/ModalFunction";
 import OpenFromModalComp from "./OpenFromModalComp";
 
 export default {
-  component: SimpleModalFunction,
+  component: ModalFunctionDemo,
   title: "Functional Modal",
 };
 
 const Template = (args) => (
   <ReduxProvider store={store}>
     <ModalFunction />
-    <SimpleModalFunction {...args} />
+    <ModalFunctionDemo {...args} />
   </ReduxProvider>
 );
 
@@ -23,7 +23,7 @@ SimpleModal.args = {
     onClose: () => {
       console.log("Simple Functional Modal Closed");
     },
-    comp: <div>This is the Simple Functional Modal</div>,
+    comp: <div>This is Simple Functional Modal</div>,
     width: "calc(100% - 2rem)",
     height: "50%",
     modalStyle: { top: "200px" },

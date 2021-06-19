@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { showModal, hideModal } from "../../store/actions";
 import { bindActionCreators } from "redux";
-import ModalFunction from "./ModalFunction";
+import ModalFunction from "./ModalFunctionDemo";
 
 const mapStateToProps = (state) => ({
   ...state.modalReducer,

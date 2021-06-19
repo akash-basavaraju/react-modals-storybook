@@ -1,7 +1,7 @@
 import React from "react";
-import "./ModalFunction.css";
+import "./ModalFunctionDemo.css";
 
-function ModalFunction(props) {
+function ModalFunctionDemo(props) {
   const { showModal, hideModal, showModalProps, getModalStyle } = props;
 
   return (
@@ -30,4 +30,4 @@ function ModalFunction(props) {
   );
 }
 
-export default ModalFunction;
+export default ModalFunctionDemo;
