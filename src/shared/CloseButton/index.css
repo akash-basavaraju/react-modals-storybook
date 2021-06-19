@@ -1,0 +1,11 @@
+.close_button_container {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.close_button {
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 12px;
+}

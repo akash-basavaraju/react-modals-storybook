@@ -1,0 +1,8 @@
+.modalp_container {
+  position: fixed;
+  background: white;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 30px;
+  overflow: auto;
+}
