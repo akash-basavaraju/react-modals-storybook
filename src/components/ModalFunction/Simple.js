@@ -2,14 +2,18 @@ import React from "react";
 import "./Simple.css";
 
 function SimpleModalFunction(props) {
-  const { showModal, hideModal, showModalProps } = props;
+  const { showModal, hideModal, showModalProps, getModalStyle } = props;
 
   return (
     <div className="simple_container">
       <button
         className="simple_button"
         onClick={() => {
-          showModal(showModalProps);
+          showModal(
+            getModalStyle
+              ? { ...showModalProps, modalStyle: getModalStyle() }
+              : showModalProps
+          );
         }}
       >
         Show Modal

@@ -42,3 +42,23 @@ OpenFromModal.args = {
     modalStyle: { top: "100px", left: "100px" },
   },
 };
+
+let multipleModalTop = 50;
+let multipleModalLeft = 0;
+
+export const MultipleModal = Template.bind({});
+MultipleModal.args = {
+  showModalProps: {
+    onClose: () => {
+      console.log("Simple Functional Modal Closed");
+    },
+    comp: <div>This is Multiple Functional Modal</div>,
+    width: "500px",
+    height: "50%",
+  },
+  getModalStyle: () => {
+    multipleModalLeft += 10;
+    multipleModalTop += 10;
+    return { top: `${multipleModalTop}px`, left: `${multipleModalLeft}px` };
+  },
+};
