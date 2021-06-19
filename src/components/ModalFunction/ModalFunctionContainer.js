@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { showModal, hideModal } from "../../store/actions";
 import { bindActionCreators } from "redux";
-import Simple from "./Simple";
+import ModalFunction from "./ModalFunction";
 
 const mapStateToProps = (state) => ({
   ...state.modalReducer,
@@ -17,4 +17,4 @@ const mapDispatchToProps = (dispatch) => {
   );
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Simple);
+export default connect(mapStateToProps, mapDispatchToProps)(ModalFunction);

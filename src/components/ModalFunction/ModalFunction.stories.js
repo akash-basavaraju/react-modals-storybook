@@ -1,19 +1,19 @@
 import React from "react";
-import Simple from "./SimpleContainer";
+import SimpleModalFunction from "./ModalFunctionContainer";
 import { Provider as ReduxProvider } from "react-redux";
 import store from "../../store";
 import ModalFunction from "../../shared/ModalFunction";
 import OpenFromModalComp from "./OpenFromModalComp";
 
 export default {
-  component: Simple,
+  component: SimpleModalFunction,
   title: "Functional Modal",
 };
 
 const Template = (args) => (
   <ReduxProvider store={store}>
     <ModalFunction />
-    <Simple {...args} />
+    <SimpleModalFunction {...args} />
   </ReduxProvider>
 );
 

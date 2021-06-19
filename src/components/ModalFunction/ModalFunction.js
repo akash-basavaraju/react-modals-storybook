@@ -1,7 +1,7 @@
 import React from "react";
-import "./Simple.css";
+import "./ModalFunction.css";
 
-function SimpleModalFunction(props) {
+function ModalFunction(props) {
   const { showModal, hideModal, showModalProps, getModalStyle } = props;
 
   return (
@@ -30,4 +30,4 @@ function SimpleModalFunction(props) {
   );
 }
 
-export default SimpleModalFunction;
+export default ModalFunction;
