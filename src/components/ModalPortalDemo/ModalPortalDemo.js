@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ModalPortal from "../../shared/ModalPortal";
 import "./ModalPortalDemo.css";
 
-function ModalPortalDemo({ children, disableHide = false }) {
+function ModalPortalDemo({ children }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
@@ -15,16 +15,14 @@ function ModalPortalDemo({ children, disableHide = false }) {
       >
         Show Modal
       </button>
-      {!disableHide && (
-        <button
-          className="simple_button"
-          onClick={() => {
-            setIsModalOpen(false);
-          }}
-        >
-          Hide Modal
-        </button>
-      )}
+      <button
+        className="simple_button"
+        onClick={() => {
+          setIsModalOpen(false);
+        }}
+      >
+        Hide Modal
+      </button>
       {isModalOpen && (
         <ModalPortal
           onClose={() => {

@@ -50,6 +50,10 @@ export const MultipleModal = Template.bind({});
 MultipleModal.args = {
   showModalProps: {
     onClose: () => {
+      if (multipleModalLeft > 0) {
+        multipleModalLeft -= 10;
+        multipleModalTop -= 10;
+      }
       console.log("Simple Functional Modal Closed");
     },
     comp: <div>This is Multiple Functional Modal</div>,

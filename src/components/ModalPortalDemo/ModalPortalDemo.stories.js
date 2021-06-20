@@ -23,5 +23,4 @@ OpenFromModal.args = {
 export const MultipleModal = Template.bind({});
 MultipleModal.args = {
   children: <MultipleModalComp />,
-  disableHide: true,
 };

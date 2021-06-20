@@ -17,8 +17,12 @@ export default function reducer(state = initialState, action) {
         const index = mModalStack.findIndex(
           ({ timeStamp }) => timeStamp === action.payload
         );
+        const { onClose } = mModalStack[index];
+        onClose();
         index !== -1 && mModalStack.splice(index, 1);
-      } else {
+      } else if (mModalStack.length > 0) {
+        const { onClose } = mModalStack[mModalStack.length - 1];
+        onClose();
         mModalStack.pop();
       }
 
