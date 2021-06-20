@@ -4,7 +4,7 @@
 
 1.  **Function Modal**
 
-    In this Modal, we can show a modal by calling `showModal` action and passing the required comp to be rendered inside the modal.
+    In this Modal, we can show a modal by calling `showModal` action and passing the required comp to be rendered inside the modal. We can also remove the last added modal by calling `hideModal`.
 
 2.  **Portal Modal**
 
